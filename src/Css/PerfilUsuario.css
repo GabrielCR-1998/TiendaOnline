@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contenedor-perfil-home {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contenedor-perfil-home .contenedor-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-perfil-home .contenedor-1 .contenedor-imagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 45px;
+  background: #130f40;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.contenedor-perfil-home .contenedor-1 .contenedor-imagen img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.contenedor-perfil-home .contenedor-1 .contenedor-imagen h2 {
+  color: #1b9cfc;
+  padding: 10px;
+  margin: 7px;
+}
+
+.contenedor-perfil-home .contenedor-2 {
+  margin-top: 55px;
+  margin-left: 12px;
+}
+
+.contenedor-perfil-home .contenedor-2 table {
+  border-collapse: collapse;
+  background: #f5f6fa;
+  width: 600px;
+}
+
+.contenedor-perfil-home .contenedor-2 table th {
+  padding: 12px;
+  text-align: center;
+  background: #192a56;
+  color: white;
+}
+
+.contenedor-perfil-home .contenedor-2 table td {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.contenedor-perfil-home .contenedor-2 table  tr:hover{
+    background: #130f40;
+    cursor: pointer;
+    color: white;
+}
+
+.contenedor-perfil-home .contenedor-2 .contenedor-carta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:40px;  
+  width: 500px;
+}
+
+
+.contenedor-perfil-home .contenedor-2 .contenedor-carta .carta{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-left:35px;
+  background: #192a56;
+  padding:15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contenedor-perfil-home .contenedor-2 .contenedor-carta .carta
+p{
+  padding: 6px;
+  color: white;
+  font-size:17px;
+}
+
+
+.contenedor-perfil-home .contenedor-2 .contenedor-carta .carta
+h2{
+  color: #d3ad7f;
+  padding: 6px;
+}

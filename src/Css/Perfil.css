@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.contenedor-perfil {
+  display: flex;
+  flex-direction: row;
+  margin-left:280px;
+  margin-top: 60px;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  float: left;
+  background: #130f40;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil h2 {
+  color: #1b9cfc;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil h2:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+} 
+
+.contenedor-perfil .contenedor-imagen-perfil form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*estilos para el input type file*/
+
+.contenedor-perfil .contenedor-imagen-perfil .file-select {
+  position: relative;
+  margin: 10px;
+  width: 90%;
+  height: 45px;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil .file-select::before {
+  background: #00c412;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  content: "Cargar una foto nueva"; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil .file-select input[type="file"] {
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.contenedor-perfil .contenedor-imagen-perfil .btn-guardar{
+  width: 60%;
+  padding: 5px;
+  border: none;
+  background:#130f40;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  
+
+  
+}
+
+.contenedor-perfil .contenedor-imagen-perfil .btn-ocultar{
+  display: none;
+}
+
+
+.contenedor-perfil .contenedor-informacion {
+  margin-left:35px;
+}
+
+.contenedor-perfil .contenedor-informacion button {
+  width: 150px;
+  padding: 2px;
+  font-size: 15px;
+  margin: 6px;
+  border-radius: 7px;
+  border: 2px groove black;
+  padding: 6px;
+  cursor: pointer;
+  color: white;
+  background: #00c412;
+}
+
+.contenedor-perfil .contenedor-informacion button:hover {
+  opacity: 0.9;
+}
+
+/*estilos para la tabla*/
+
+.contenedor-perfil .contenedor-informacion table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: #f5f6fa;
+}
+
+.contenedor-perfil .contenedor-informacion table th {
+  padding: 12px;
+  text-align: center;
+  background: #192a56;
+  color: white;
+}
+
+.contenedor-perfil .contenedor-informacion table td {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.contenedor-perfil .contenedor-informacion table tr:hover {
+  background: #130f40;
+  cursor: pointer;
+  color: white;
+}
+
+.contenedor-perfil .contenedor-carta {
+  position: relative;
+  top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-perfil .contenedor-informacion .contenedor-carta .carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+  background: #192a56;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contenedor-perfil .contenedor-informacion .contenedor-carta .carta:hover{
+  opacity: 0.95;
+}
+
+.contenedor-perfil .contenedor-informacion .contenedor-carta .carta p {
+  padding: 6px;
+  color: white;
+  font-size: 20px;
+}
+
+.contenedor-perfil .contenedor-informacion .contenedor-carta .carta h2 {
+  color: #d3ad7f;
+  padding: 6px;
+}

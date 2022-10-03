@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+
+/**Cambia el estilo del scrollbar*/
+
+html::-webkit-scrollbar-thumb{
+    background:gray;
+    border-radius: 5rem;
+}
+
+

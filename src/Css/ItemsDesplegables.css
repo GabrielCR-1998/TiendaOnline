@@ -1,0 +1,27 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+
+.contenedor-items ul,li a{
+  text-decoration: none;
+  color: white;
+}
+
+.contenedor-items ul,li{
+  text-align: center;
+  padding: 15px 10px; 
+}
+
+.contenedor-items li{
+  border-bottom: 1px solid rgba(100, 100, 100, .3);
+}
+
+.contenedor-items ul  :hover{
+  background: #1a567e;
+  color: white;  
+}
+

@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.contenedor-menu_vertical{ 
+    position: fixed;
+    width:265px;
+    height: 100vh;
+    background:#121212;
+    transition: all 600ms linear;
+    z-index: 1000; 
+}
+
+
+.contenedor-menu_vertica_ocultar{
+   display: none;
+}
+
+
+.contenedor-menu_vertical
+.contenedor-imagen_perfil{
+    padding-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor-menu_vertical
+.contenedor-imagen_perfil img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+@media(max-width:480px){
+  
+}

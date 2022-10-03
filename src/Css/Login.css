@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*quita las flechas del input number*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+
+}
+
+
+.contenedor-login-modal{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:450px 600px;
+    background-color: rgba(0,0,0,.6);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0; 
+    z-index: 1000;
+ }
+
+ /*estilos para el inicio de session*/
+
+ .contenedor-login-modal .iniciar-session{
+    margin-top: 40px;
+    height: 400px;
+    background: white;
+    text-align: center;
+    padding:40px;
+    border: 2px solid black;
+ }
+
+ .contenedor-login-modal .iniciar-session form .grupo_input{
+    position: relative;
+ }
+
+ .contenedor-login-modal .iniciar-session form .grupo_input input{
+    padding: 12px 0 12px 42px;
+    margin:10px;
+    width:90%;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid black;
+ }
+
+ .contenedor-login-modal .iniciar-session form .grupo_input i{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    margin-left:6px;
+ }
+
+ .contenedor-login-modal .iniciar-session form .btn-input{
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    background:#00C412;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+ }
+
+ .contenedor-login-modal .iniciar-session form .informacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+ }
+
+  .contenedor-login-modal .iniciar-session form .informacion h3{
+    font-size: 13px;
+    margin-left: 6px;
+    color: #d3ad7f;   
+ }
+
+ .contenedor-login-modal .iniciar-session form .informacion a{
+    text-decoration: none;
+    margin-left: 6px;   
+ }
+
+    /*estilos para el registrarse*/ 
+
+ .contenedor-login-modal  .registrarse{
+    margin-top: 40px;
+    height: 400px;
+    background: white;
+    text-align: center;
+    padding:40px;
+    border:2px solid black;
+ }
+
+ .contenedor-login-modal  .registrarse form .grupo_input{
+    position: relative;
+ }
+
+ .contenedor-login-modal  .registrarse form input{
+    margin: 10px;
+    padding: 12px 0 12px 48px;
+    border-radius: 8px;
+    border: 2px solid black;  
+ }
+
+ .contenedor-login-modal .registrarse form .grupo_input i{
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-size: 25px;
+    margin-left:6px;
+ }
+
+ .contenedor-login-modal .registrarse form .grupo_input .icono-telefono{
+    position: absolute;
+    left: 52%;
+ }
+
+ .contenedor-login-modal .registrarse form .grupo_input .input-password{
+    width:90%;  
+ }
+
+ .contenedor-login-modal .registrarse form .btn-input{
+    background: #00C412;
+    color: white;
+    text-align:center;
+    width: 80%;
+    cursor: pointer;
+ }
+
+ .contenedor-login-modal .registrarse img{
+    background:red;
+    float: right;
+    cursor: pointer;
+ }
+
+

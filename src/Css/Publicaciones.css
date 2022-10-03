@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-publicaciones .encabezado{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px;
+    margin-left:235px;
+}
+
+.contenedor-publicaciones .encabezado .icono-camara{
+    position: relative;
+    top:5px;
+    margin: 10px;
+}
+
+.contenedor-publicaciones .encabezado button{
+    margin-left: 40px;
+    padding: 15px;
+    width:200px;
+    text-align: center;
+    color: white;
+    background: #00C412;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.contenedor-publicaciones .encabezado .icono-add{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contenedor-publicaciones .encabezado button:hover{
+    opacity: 0.90;
+  
+}
+
+.contenedor-publicaciones .contenedor-carta-publicacion{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.contenedor-publicaciones .sin-publicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color:white;
+    border: 3px groove black;
+    border-radius: 12px;
+    width: 500px;
+    height: 200px;
+    background: #16a085;
+}
+
+
+.contenedor-publicaciones .sin-publicacion i{
+    font-size: 2rem;
+    color: black;
+    margin-left: 10px;
+}
+
+
+.contenedor-publicaciones .sin-publicacion:hover{
+    opacity: 0.95;
+}
+
+.contenedor-publicaciones .sin-publicacion .h1:hover,.h2:hover{
+    cursor: pointer;
+    /*color:#fbc531;*/
+}
+
+.contenedor-publicaciones .sin-publicacion span{
+    font-weight:200 bold;
+    color:#474747;
+}
+
+.contenedor-publicaciones .sin-publicacion span:hover{
+    color:#fbc531;
+
+}

@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor .contenedor-imagen{
+    width: 100%;
+    height:600px; 
+}
+
+
+.contenedor .contenedor-imagen .slide-efecto img{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    
+
+}
+
+
+.contenedor .contenedor-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:60px;   
+}
+
+
+.contenedor  .contenedor-descripcion 
+.contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor  .contenedor-descripcion 
+.contenedor-imagenes img{
+    width: 100px;
+    height: 100px;
+    margin:20px;
+
+}
+
+.contenedor  .contenedor-descripcion
+.contenedor-parrafos{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.contenedor  .contenedor-descripcion
+.contenedor-parrafos p{
+    margin: 10px; 
+    font-size:18px;
+}
+
+
+.contenedor  .contenedor-descripcion h2{
+    margin-top: 40px;
+}
+
+.contenedor  .contenedor-descripcion 
+.contenedor-descripcion .contenedor-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+}
+
+.contenedor  .contenedor-descripcion .contenedor-select .provincias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor  .contenedor-descripcion .contenedor-select .categorias{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left:105px;
+
+} 
+
+.contenedor  .contenedor-descripcion .contenedor-select select{
+    margin: 10px;
+    padding:5px;
+    border-radius:15px;
+    text-align: center;
+    border: 2px solid black;
+    /*color: darkkhaki;*/
+
+}
+
+.contenedor .contenedor-carta{
+    display:flex ;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left:300px;
+    margin-top:60px;
+}
+
+
+
+@media(max-width:480px){
+    .contenedor-carta{
+      width:100%;
+      margin: 0 auto;
+    }
+    
+      
+  }
