@@ -179,7 +179,7 @@ const PerfilHome = () => {
     <div className="contenedor-perfil-home">
       <div className="contenedor-1">
         <div className="contenedor-imagen">
-          <img src={require("../Images/react.png")} alt="" />
+          <img src={usuario.rutaimagen} alt="" />
 
         </div>
         <div className="carta">

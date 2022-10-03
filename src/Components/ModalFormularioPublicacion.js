@@ -259,7 +259,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const eventoNuevaPublicacion = async () => {
     if (localStorage.getItem("session-usuario") === null) {
-      window.location.href = "/";
+      window.location.href = "/TiendaOnline";
     } else {
       const datos_localStorage = JSON.parse(
         localStorage.getItem("session-usuario")
@@ -448,7 +448,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const eventoActualizarPublicacion = async (e) => {
     if (localStorage.getItem("session-usuario") === null) {
-      window.location.href = "/";
+      window.location.href = "/TiendaOnline";
     } else {
       const datos_localSorage = JSON.parse(
         localStorage.getItem("session-usuario")
@@ -577,7 +577,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const obtenerPublicacion = async () => {
     if (localStorage.getItem("session-usuario") == null) {
-      window.location.href = "/";
+      window.location.href = "/TiendaOnline";
     } else {
       /**
        * props.datos viene de Carta.js
@@ -682,7 +682,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const validarSession = () => {
     if (localStorage.getItem("session-usuario") === null) {
-      window.location.href = "/";
+      window.location.href = "/TiendaOnline";
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;
@@ -697,7 +697,7 @@ const ModalFormularioPublicacion = (props) => {
               "Vuleve a iniciar session"
             );
             localStorage.removeItem("session-usuario");
-            window.location.href = "/";
+            window.location.href = "/TiendaOnline";
           }
         }
       );

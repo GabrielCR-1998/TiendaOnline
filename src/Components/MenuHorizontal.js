@@ -25,7 +25,7 @@ const MenuHorizonatl = (props) => {
 
       <div className="contenedor-items">
         <div className="contenedor-logo">
-          <Link className="" to={"/"}>
+          <Link className="" to={"/TiendaOnline"}>
             <img
               src={require("../Images/icono-app.png")}
               alt=""

@@ -360,7 +360,7 @@ const ModalFormularioUsuario = (props) => {
 
   const validarSession = () => {
     if (localStorage.getItem("session-usuario") === null) {
-      navegacion("/");
+      navegacion("/TiendaOnline");
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;
@@ -376,7 +376,7 @@ const ModalFormularioUsuario = (props) => {
             );
 
             localStorage.removeItem("session-usuario");
-            navegacion("/");
+            navegacion("/TiendaOnline");
           }
         }
       );

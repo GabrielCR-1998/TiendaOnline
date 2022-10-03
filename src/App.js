@@ -98,7 +98,7 @@ function App() {
         ) : null}
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/TiendaOnline" element={<Home />} />
           <Route exact path="/publicaciones/" element={<Publicaciones />} />
           <Route exact path="/perfil" element = {<Perfil />} />
           <Route exact path="/perfilHome/:correo" element={<PerfilHome />} />

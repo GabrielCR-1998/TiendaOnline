@@ -45,7 +45,7 @@ const MenuVertical = ({ valor }) => {
 
   const cerrarSession = () => {
     localStorage.removeItem("session-usuario");
-    window.location.href = "/";
+    window.location.href = "/TiendaOnline";
   };
   return (
     <div
