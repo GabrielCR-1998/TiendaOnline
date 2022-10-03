@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "84b72200ea181693d7f1",
+    "revision": "df9cfcf6d9dbc272b6fe",
     "url": "/TiendaOnline/static/css/main.8a095f3e.chunk.css"
   },
   {
-    "revision": "84b72200ea181693d7f1",
-    "url": "/TiendaOnline/static/js/main.fe58864d.chunk.js"
+    "revision": "df9cfcf6d9dbc272b6fe",
+    "url": "/TiendaOnline/static/js/main.e34082b4.chunk.js"
   },
   {
     "revision": "e7e7bf52e8ed68a40ae5",
@@ -40,10 +40,6 @@ self.__precacheManifest = [
     "url": "/TiendaOnline/static/media/laptop.57f2b7a9.png"
   },
   {
-    "revision": "cba0b89d2bf2d96a1ed26edb5849f804",
-    "url": "/TiendaOnline/static/media/react.cba0b89d.png"
-  },
-  {
     "revision": "4a858d68b3f62b454723856005543a3e",
     "url": "/TiendaOnline/static/media/icono-app.4a858d68.png"
   },
@@ -60,7 +56,7 @@ self.__precacheManifest = [
     "url": "/TiendaOnline/static/media/twitter.a318167e.png"
   },
   {
-    "revision": "2a71defacd66a32bac6a12282cc906b9",
+    "revision": "aebeea180539b11e4be423fc0b30d4ce",
     "url": "/TiendaOnline/index.html"
   }
 ];
