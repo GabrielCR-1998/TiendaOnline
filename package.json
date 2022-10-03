@@ -2,7 +2,7 @@
   "name": "tienda_online",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GabrielCR-1998.github.io",
+  "homepage": "https://GabrielCR-1998.github.io/TiendaOnline",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
