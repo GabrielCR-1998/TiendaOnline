@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4be42b0bf2f9bf84e260",
+    "revision": "3b57da93148425a80f37",
     "url": "/TiendaOnline/static/css/main.8a095f3e.chunk.css"
   },
   {
-    "revision": "4be42b0bf2f9bf84e260",
-    "url": "/TiendaOnline/static/js/main.ab68e7bc.chunk.js"
+    "revision": "3b57da93148425a80f37",
+    "url": "/TiendaOnline/static/js/main.1284a673.chunk.js"
   },
   {
     "revision": "e7e7bf52e8ed68a40ae5",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/TiendaOnline/static/media/twitter.a318167e.png"
   },
   {
-    "revision": "9745daae38c99e6dfe94e8d761ba8324",
+    "revision": "fbb07badff2434353092eab636dac426",
     "url": "/TiendaOnline/index.html"
   }
 ];
