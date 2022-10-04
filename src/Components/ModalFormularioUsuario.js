@@ -116,7 +116,7 @@ const ModalFormularioUsuario = (props) => {
       );
 
       if (response.status === 200) {
-        window.location.href = "/perfil";
+        window.location.href = "/TiendaOnline/perfil";
       } else if (response.status === 404) {
         // en caso de que el correo no exista
       } else if (response.status === 400) {

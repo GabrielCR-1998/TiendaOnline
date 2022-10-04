@@ -324,7 +324,7 @@ const ModalFormularioPublicacion = (props) => {
           }
 
           if (response_nuevaPublicacion && response_subirFoto) {
-            window.location.href = "/publicaciones";
+            window.location.href = "/TiendaOnline/publicaciones";
           }
         }
       }
@@ -498,7 +498,7 @@ const ModalFormularioPublicacion = (props) => {
       }
 
       if (response_actualizar) {
-        window.location.href = "/publicaciones";
+        window.location.href = "/TiendaOnline/publicaciones";
       } else {
         modalSweetAlert("error", "Falló al actualizar la publicación", "");
       }

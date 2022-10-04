@@ -135,7 +135,7 @@ const Login = (props) => {
         };
 
         localStorage.setItem("session-usuario", JSON.stringify(session));
-        window.location.href = "/perfil";
+        window.location.href = "/TiendaOnline/perfil";
       } else if (response.status === 400) {
         modalSweetAlert(
           "error",
