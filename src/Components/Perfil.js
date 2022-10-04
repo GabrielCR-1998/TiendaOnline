@@ -160,14 +160,8 @@ const Perfil = () => {
         }
       );
 
-      if (response.status === 200) {
-        modalSweetAlert(
-          "success",
-          "Foto actualizada",
-          ""
-        );
-        
-        window.location.href = "/TiendaOnline/perfil";
+      if (response.status === 200) {    
+        window.location.href = "/TiendaOnline/perfil/";
       } else if (response.status === 404) {
         // no aplica
       } else if (response.status === 400) {
