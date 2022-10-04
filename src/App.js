@@ -98,10 +98,10 @@ function App() {
         ) : null}
 
         <Routes>
-          <Route exact path="/TiendaOnline" element={<Home />} />
-          <Route exact path="/TiendaOnline/publicaciones" element={<Publicaciones />} />
-          <Route exact path="/TiendaOnline/perfil" element = {<Perfil />} />
-          <Route exact path="/TiendaOnline/perfilUsuario/:correo" element={<PerfilHome />} />
+          <Route path="/TiendaOnline" element={<Home />} />
+          <Route path="/TiendaOnline/perfil" element = {<Perfil />} />
+          <Route path="/TiendaOnline/publicaciones" element={<Publicaciones />} />
+          <Route path="/TiendaOnline/perfilUsuario/:correo" element={<PerfilHome />} />
         </Routes>
         <Footer />
       </div>
