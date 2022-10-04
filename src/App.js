@@ -100,7 +100,7 @@ function App() {
         <Routes>
           <Route exact path="/TiendaOnline" element={<Home />} />
           <Route exact path="/TiendaOnline/publicaciones" element={<Publicaciones />} />
-          <Route exact path="/TiendaOnline/perfil" element = {<Perfil />} />
+          <Route exact path="/perfil" element = {<Perfil />} />
           <Route exact path="/TiendaOnline/perfilUsuario/:correo" element={<PerfilHome />} />
         </Routes>
         <Footer />

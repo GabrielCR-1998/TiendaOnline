@@ -161,7 +161,7 @@ const Perfil = () => {
       );
 
       if (response.status === 200) {    
-        window.location.href = "/TiendaOnline/perfil";
+        window.location.href = "/perfil";
       } else if (response.status === 404) {
         // no aplica
       } else if (response.status === 400) {
