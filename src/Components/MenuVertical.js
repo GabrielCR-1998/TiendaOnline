@@ -57,9 +57,8 @@ const MenuVertical = ({ valor }) => {
         <img src={usuario.rutaimagen} alt="" />
       </div>
       <ItemsDesplegables
-        perfil={"/TiendaOnline/perfil"}
-        publicaciones={"/TiendaOnline/publicaciones"}
-        contacto={"/contacto"}
+        perfil={process.env.PUBLIC_URL + "/TiendaOnline/perfil"}
+        publicaciones={process.env.PUBLIC_URL + "/TiendaOnline/publicaciones"}
         eventoCerrarSession={cerrarSession}
       />
     </div>

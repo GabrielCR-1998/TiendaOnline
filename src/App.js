@@ -98,10 +98,10 @@ function App() {
         ) : null}
 
         <Routes>
-          <Route path="/TiendaOnline" element={<Home />} />
-          <Route path="/TiendaOnline/perfil" element = {<Perfil />} />
-          <Route path="/TiendaOnline/publicaciones" element={<Publicaciones />} />
-          <Route path="/TiendaOnline/perfilUsuario/:correo" element={<PerfilHome />} />
+          <Route path={process.env.PUBLIC_URL + "/TiendaOnline"} element={<Home />} />
+          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/perfil"} element = {<Perfil />} />
+          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/publicaciones"} element={<Publicaciones />} />
+          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/perfilUsuario/:correo"} element={<PerfilHome />} />
         </Routes>
         <Footer />
       </div>
