@@ -42,6 +42,27 @@
   margin: 7px;
 }
 
+.contenedor-perfil-home .contenedor-1 .carta{
+  width: 700px; 
+}
+
+
+.contenedor-perfil-home .contenedor-1 .carta-flex{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  left:300px;
+  
+  
+  
+  
+}
+
+
+
+
 .contenedor-perfil-home .contenedor-2 {
   margin-top: 55px;
   margin-left: 12px;
@@ -71,6 +92,7 @@
     cursor: pointer;
     color: white;
 }
+
 
 .contenedor-perfil-home .contenedor-2 .contenedor-carta{
   display: flex;

@@ -182,6 +182,7 @@ const PerfilHome = () => {
 
         </div>
         <div className="carta">
+          <div className="carta-flex">
           {publicacion.map((item) => {
             return (
               <Carta
@@ -198,6 +199,9 @@ const PerfilHome = () => {
               />
             );
           })}
+
+          </div>
+          
         </div>
       </div>
 

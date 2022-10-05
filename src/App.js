@@ -1,14 +1,12 @@
 import React from "react";
+import jwt from "jsonwebtoken";
 import "./App.css";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Publicaciones from "./Components/Publicaciones";
 import PerfilHome from "./Components/PerfilHome";
-
 import Footer from "./Components/Footer";
 import { useEffect, useState } from "react";
-import jwt from "jsonwebtoken";
-
 import MenuHorizonatl from "./Components/MenuHorizontal";
 import MenuVertical from "./Components/MenuVertical";
 import Login from "./Components/Login";
@@ -76,7 +74,6 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
       <div className="App">
         {
           // eventoClick => abre y cierra el menu lateral
@@ -97,16 +94,16 @@ function App() {
           <Login mostrar cerrar_modal={cerrar_modalInicioSession} />
         ) : null}
 
+
         <Routes>
-          <Route path={process.env.PUBLIC_URL + "/TiendaOnline"} element={<Home />} />
-          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/perfil"} element = {<Perfil />} />
-          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/publicaciones"} element={<Publicaciones />} />
-          <Route path={process.env.PUBLIC_URL + "/TiendaOnline/perfilUsuario/:correo"} element={<PerfilHome />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/perfil"  element = {<Perfil />} />
+          <Route path="/publicaciones" element={<Publicaciones />} />
+          <Route path="/perfilUsuario/:correo" element={<PerfilHome />} />
         </Routes>
         <Footer />
       </div>
       
-    </BrowserRouter>
   );
 }
 

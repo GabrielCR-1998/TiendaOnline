@@ -95,8 +95,8 @@ const ModalFormularioUsuario = (props) => {
     const datos = {
       correo: usuario.correo,
       nombre: usuario.nombre,
-      apellidos: usuario.apellidos,
-      telefono: usuario.telefono,
+      apellidos:usuario.apellidos,
+      telefono:usuario.telefono,
       password: "", // el password no se actualiza para este caso
     };
 
@@ -116,29 +116,23 @@ const ModalFormularioUsuario = (props) => {
       );
 
       if (response.status === 200) {
-        const datos = {
-          correo:usuario.correo,
-          token:token
-        }
-        localStorage.removeItem("session-usuario");
-        localStorage.setItem("session-usuario",JSON.stringify(datos));
         navegacion(0);
       } else if (response.status === 404) {
         // en caso de que el correo no exista
       } else if (response.status === 400) {
+        const datos = await response.json();
         modalSweetAlert(
           "error",
-          `${response.text()}`,
+          `${datos}`,
           `Codigo de error:${response.status}`
         );
       }
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      } 
-      
+      }
     }
   };
 
@@ -188,19 +182,20 @@ const ModalFormularioUsuario = (props) => {
       } else if (response.status === 404) {
         // en caso de que el correo no exista
       } else if (response.status === 400) {
+        const datos = await response.json();
         modalSweetAlert(
           "error",
-          `${response.text()}`,
+          `${datos}`,
           `Codigo de error:${response.status}`
         );
       }
       return false;
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      } 
+      }
     }
   };
 
@@ -247,28 +242,23 @@ const ModalFormularioUsuario = (props) => {
       );
 
       if (response.status === 200) {
-        modalSweetAlert(
-          "success",
-          "Contraseña actualizada",
-          ""
-        );
         navegacion(0);
       } else if (response.status === 404) {
         // correo => no existe
       } else if (response.status === 400) {
+        const datos = await response.json();
         modalSweetAlert(
           "error",
-          `${response.text()}`,
+          `${datos}`,
           `Codigo de error:${response.status}`
         );
       }
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      } 
-      
+      }
     }
   };
 
@@ -348,12 +338,11 @@ const ModalFormularioUsuario = (props) => {
         );
       }
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      } 
-      
+      }
     }
   };
 
@@ -374,7 +363,7 @@ const ModalFormularioUsuario = (props) => {
 
   const validarSession = () => {
     if (localStorage.getItem("session-usuario") === null) {
-      navegacion("/TiendaOnline");
+      navegacion("/");
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;
@@ -390,7 +379,7 @@ const ModalFormularioUsuario = (props) => {
             );
 
             localStorage.removeItem("session-usuario");
-            navegacion("/TiendaOnline");
+            navegacion("/");
           }
         }
       );
@@ -448,6 +437,7 @@ const ModalFormularioUsuario = (props) => {
             name="telefono"
             placeholder="Telefono"
             autoComplete="nope"
+            readOnly
             value={usuario.telefono || ""}
             onChange={cambioInput}
           />

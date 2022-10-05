@@ -186,7 +186,7 @@ const Carta = (props) => {
               <div className="perfil">
                 <img src={props.imagen_perfil} alt="" />
                 {props.nombre == null && props.apellido == null ? null : (
-                  <Link to={`/TiendaOnline/perfilUsuario/${props.correo}`}>
+                  <Link to={`/perfilUsuario/${props.correo}`}>
                     {`${props.nombre} ${props.apellido}`}
                   </Link>
                 )}

@@ -156,7 +156,7 @@ const Publicacion = () => {
             );
             localStorage.removeItem("session-usuario");
 
-            navegacion("/TiendaOnline");
+            navegacion("/");
           }
         }
       );

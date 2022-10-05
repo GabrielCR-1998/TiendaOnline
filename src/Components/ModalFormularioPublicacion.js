@@ -262,7 +262,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const eventoNuevaPublicacion = async () => {
     if (localStorage.getItem("session-usuario") === null) {
-      window.location.href = "/TiendaOnline";
+      navegacion("/");
     } else {
       const datos_localStorage = JSON.parse(
         localStorage.getItem("session-usuario")
@@ -540,8 +540,7 @@ const ModalFormularioPublicacion = (props) => {
         modalSweetAlert("error", "Hubo un error de conexión", "");
       }else{
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      }  
-      
+      }   
     }
   };
 
@@ -580,7 +579,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const obtenerPublicacion = async () => {
     if (localStorage.getItem("session-usuario") == null) {
-      navegacion("/TiendaOnline");
+      navegacion("/");
     } else {
       /**
        * props.datos viene de Carta.js
@@ -685,7 +684,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const validarSession = () => {
     if (localStorage.getItem("session-usuario") === null) {
-      navegacion("/TiendaOnline");
+      navegacion("/");
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;

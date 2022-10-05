@@ -143,7 +143,7 @@ const Login = (props) => {
         };
 
         localStorage.setItem("session-usuario", JSON.stringify(session));
-       navegacion("/TiendaOnline/perfil");
+        window.location.href = "/perfil";
       } else if (response.status === 400) {
         modalSweetAlert(
           "error",

@@ -6,7 +6,6 @@ import ItemsDesplegables from "./ItemsDesplegables";
 
 const MenuVertical = ({ valor }) => {
   const [usuario, setUsuario] = useState([]);
-
   const obtenerUsuario = async (correo) => {
     try {
       const response = await fetch(
@@ -45,7 +44,7 @@ const MenuVertical = ({ valor }) => {
 
   const cerrarSession = () => {
     localStorage.removeItem("session-usuario");
-    window.location.href = "/TiendaOnline";
+    window.location.href = "/";
   };
   return (
     <div
@@ -57,8 +56,9 @@ const MenuVertical = ({ valor }) => {
         <img src={usuario.rutaimagen} alt="" />
       </div>
       <ItemsDesplegables
-        perfil={process.env.PUBLIC_URL + "/TiendaOnline/perfil"}
-        publicaciones={process.env.PUBLIC_URL + "/TiendaOnline/publicaciones"}
+        perfil={"/perfil"}
+        publicaciones={"/publicaciones"}
+        cerrarSession = {"/"}
         eventoCerrarSession={cerrarSession}
       />
     </div>

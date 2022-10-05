@@ -255,7 +255,7 @@ const Perfil = () => {
             "Vuleve a iniciar session"
           );
           localStorage.removeItem("session-usuario");
-          navegacion("/TiendaOnline");
+          navegacion("/");
         }
       }
     );
@@ -284,7 +284,7 @@ const Perfil = () => {
 
   useEffect(() => {
     if (localStorage.getItem("session-usuario") === null) {
-      navegacion("/TiendaOnline");
+      navegacion("/");
     } else {
       useEffectAsync();
     }
