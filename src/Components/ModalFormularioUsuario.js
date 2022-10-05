@@ -116,7 +116,13 @@ const ModalFormularioUsuario = (props) => {
       );
 
       if (response.status === 200) {
-        window.location.href = "/TiendaOnline/perfil";
+        const datos = {
+          correo:usuario.correo,
+          token:token
+        }
+        localStorage.removeItem("session-usuario");
+        localStorage.setItem("session-usuario",JSON.stringify(datos));
+        navegacion(0);
       } else if (response.status === 404) {
         // en caso de que el correo no exista
       } else if (response.status === 400) {
@@ -241,8 +247,12 @@ const ModalFormularioUsuario = (props) => {
       );
 
       if (response.status === 200) {
-        alert("Datos actualizados");
-        window.location.href = "/TiendaOnline/perfil";
+        modalSweetAlert(
+          "success",
+          "Contraseña actualizada",
+          ""
+        );
+        navegacion(0);
       } else if (response.status === 404) {
         // correo => no existe
       } else if (response.status === 400) {
@@ -277,7 +287,11 @@ const ModalFormularioUsuario = (props) => {
       password.passwordNueva === "" ||
       password.verificarPassword === ""
     ) {
-      alert("No se permiten campos vacios");
+      modalSweetAlert(
+        "warning",
+        "No se permiten campos vacios",
+        "Llena todos los campos"
+      );
     } else {
       if (await validarPassword(correo, token)) {
         if (sonPasswordIguales()) {
@@ -444,6 +458,7 @@ const ModalFormularioUsuario = (props) => {
             autoComplete="nope"
             value={usuario.correo || ""}
             onChange={cambioInput}
+            readOnly
           />
 
           <input

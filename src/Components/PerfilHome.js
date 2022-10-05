@@ -149,7 +149,6 @@ const PerfilHome = () => {
 
       if (response.status === 200) {
         const datos = await response.json();
-        console.log(datos);
         setEstadistica(datos);
       } else if (response.status === 404) {
         // no aplica

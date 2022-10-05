@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from "uuid";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Css/ModalFormularioPublicaciones.css";
 
 const ModalFormularioPublicacion = (props) => {
@@ -57,6 +58,8 @@ const ModalFormularioPublicacion = (props) => {
    * la categoria y el estado de la
    */
   let listaPublicacion = [];
+
+  const navegacion = useNavigate();
 
   /**
    * maneja los camios de los inputs
@@ -324,7 +327,7 @@ const ModalFormularioPublicacion = (props) => {
           }
 
           if (response_nuevaPublicacion && response_subirFoto) {
-            window.location.href = "/TiendaOnline/publicaciones";
+            navegacion(0);
           }
         }
       }
@@ -498,7 +501,7 @@ const ModalFormularioPublicacion = (props) => {
       }
 
       if (response_actualizar) {
-        window.location.href = "/TiendaOnline/publicaciones";
+        navegacion(0);
       } else {
         modalSweetAlert("error", "Falló al actualizar la publicación", "");
       }
@@ -522,7 +525,7 @@ const ModalFormularioPublicacion = (props) => {
       );
 
       if (response.status === 200) {
-        window.location.href = "/publicaciones";
+        navegacion(0);
       } else if (response.status === 404) {
         // idPublicacion => en caso que no exista
       } else if (response.status === 400) {
@@ -577,7 +580,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const obtenerPublicacion = async () => {
     if (localStorage.getItem("session-usuario") == null) {
-      window.location.href = "/TiendaOnline";
+      navegacion("/TiendaOnline");
     } else {
       /**
        * props.datos viene de Carta.js
@@ -682,7 +685,7 @@ const ModalFormularioPublicacion = (props) => {
 
   const validarSession = () => {
     if (localStorage.getItem("session-usuario") === null) {
-      window.location.href = "/TiendaOnline";
+      navegacion("/TiendaOnline");
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;
@@ -697,7 +700,7 @@ const ModalFormularioPublicacion = (props) => {
               "Vuleve a iniciar session"
             );
             localStorage.removeItem("session-usuario");
-            window.location.href = "/TiendaOnline";
+            navegacion("/TiendaOnline");
           }
         }
       );

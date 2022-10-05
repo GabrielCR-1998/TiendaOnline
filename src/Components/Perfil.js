@@ -160,8 +160,8 @@ const Perfil = () => {
         }
       );
 
-      if (response.status === 200) {    
-        window.location.href = "/TiendaOnline/perfil";
+      if (response.status === 200) {
+        navegacion(0);
       } else if (response.status === 404) {
         // no aplica
       } else if (response.status === 400) {

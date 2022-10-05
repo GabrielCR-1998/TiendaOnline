@@ -5,6 +5,7 @@ import { AiFillPhone } from "react-icons/ai";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Css/Login.css";
 
 const Login = (props) => {
@@ -15,6 +16,8 @@ const Login = (props) => {
     password: "",
     telefono: "",
   });
+
+  const navegacion = useNavigate();
 
   /**
    * alerta sweet alert2
@@ -66,26 +69,31 @@ const Login = (props) => {
         "No se permiten campos vacios",
         "Llena todos los campos"
       );
+      e.preventDefault();
     } else if (!esCorreoValido()) {
       modalSweetAlert("warning", "el correo no es valido", "");
+      e.preventDefault();
     } else {
       registrarUsuario();
+      e.preventDefault();
     }
-    e.preventDefault();
+   
   };
 
-  const envioFormularioInicioSssion = (e) => {
+  const envioFormularioInicioSssion =  (e) => {
     if (usuario.email.length === 0 || usuario.password.length === 0) {
       modalSweetAlert(
         "warning",
         "No se permiten campos vacios",
         "Llena todos los campos"
       );
+
+      e.preventDefault();
+      
     } else {
       IniciarSession();
+      e.preventDefault();
     }
-
-    e.preventDefault();
   };
 
   /**
@@ -135,7 +143,7 @@ const Login = (props) => {
         };
 
         localStorage.setItem("session-usuario", JSON.stringify(session));
-        window.location.href = "/TiendaOnline/perfil";
+       navegacion("/TiendaOnline/perfil");
       } else if (response.status === 400) {
         modalSweetAlert(
           "error",
@@ -152,7 +160,7 @@ const Login = (props) => {
     }
   };
 
-  const IniciarSession = async () => {
+  const IniciarSession = async  () => {    
     try {
       const datos = {
         correo: usuario.email,
@@ -188,7 +196,7 @@ const Login = (props) => {
         };
 
         localStorage.setItem("session-usuario", JSON.stringify(session));
-        window.location.href = "/TiendaOnline";
+        navegacion(0);
       } else if (response.status === 400) {
         modalSweetAlert(
           "error",
