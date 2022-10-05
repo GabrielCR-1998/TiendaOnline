@@ -97,7 +97,7 @@ function App() {
         ) : null}
 
         <Routes>
-          <Route path="/TiendaOnline" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/TiendaOnline/perfil" element = {<Perfil />} />
           <Route path="/TiendaOnline/publicaciones" element={<Publicaciones />} />
           <Route path="/TiendaOnline/perfilUsuario/:correo" element={<PerfilHome />} />
