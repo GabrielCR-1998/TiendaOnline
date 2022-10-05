@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Css/MenuVertical.css";
 import ItemsDesplegables from "./ItemsDesplegables";
 
 const MenuVertical = ({ valor }) => {
   const [usuario, setUsuario] = useState([]);
+  const navegacion = useNavigate();
   const obtenerUsuario = async (correo) => {
     try {
       const response = await fetch(
@@ -44,7 +46,8 @@ const MenuVertical = ({ valor }) => {
 
   const cerrarSession = () => {
     localStorage.removeItem("session-usuario");
-    window.location.href = "/";
+    navegacion("/");
+    navegacion(0); 
   };
   return (
     <div
