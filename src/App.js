@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Publicaciones from "./Components/Publicaciones";
 import PerfilHome from "./Components/PerfilHome";
@@ -76,7 +76,6 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
       <div className="App">
         {
           // eventoClick => abre y cierra el menu lateral
@@ -106,7 +105,6 @@ function App() {
         <Footer />
       </div>
       
-    </BrowserRouter>
   );
 }
 
