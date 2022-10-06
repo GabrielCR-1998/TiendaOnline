@@ -1,7 +1,11 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
+
 import { Slide } from "react-slideshow-image";
+
+
+
 import "react-slideshow-image/dist/styles.css";
 import Carta from "./Carta";
 import "../Css/Home.css";
@@ -262,6 +266,7 @@ const Home = () => {
   return (
     <div className="contenedor">
       <div className="contenedor-imagen">
+        
         <Slide autoplay={true}>
           <div className="slide-efecto">
             <img src={require("../Images/imagen-slide-1.jpg")} alt="" />
@@ -275,6 +280,7 @@ const Home = () => {
             <img src={require("../Images/imagen-slide-3.jpg")} alt="" />
           </div>
         </Slide>
+
       </div>
       <div className="contenedor-descripcion">
         <h1>Compra y venta</h1>

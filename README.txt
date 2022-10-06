@@ -3,6 +3,7 @@ npm install sweetalert2
 npm install uuidv4  
 npm install jsonwebtoken  
 npm install react-icons
+npm install react-slideshow-image 
 npm i gh-pages
 
 Comandos GIT

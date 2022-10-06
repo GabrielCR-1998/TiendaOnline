@@ -302,6 +302,7 @@ const ModalFormularioPublicacion = (props) => {
             "Consola/Video Juegos": 1,
           };
           const numeroCategoria = categorias[select.categorias];
+          
           const idPublicacion = uuidv4();
 
           //* registrando la publicación en la api
@@ -688,6 +689,7 @@ const ModalFormularioPublicacion = (props) => {
     } else {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       const token = datos.token;
+      
       jwt.verify(
         token,
         "This is my supper secret key for jwt",
@@ -702,7 +704,7 @@ const ModalFormularioPublicacion = (props) => {
             navegacion("/TiendaOnline");
           }
         }
-      );
+      ); 
     }
   };
 
