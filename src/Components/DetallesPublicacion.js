@@ -93,11 +93,11 @@ const DetallesPublicacion = (props) => {
         );
       }
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      }  
+      }
     }
   };
 
@@ -132,11 +132,11 @@ const DetallesPublicacion = (props) => {
         );
       }
     } catch (error) {
-      if(error.message === "Failed to fetch"){
+      if (error.message === "Failed to fetch") {
         modalSweetAlert("error", "Hubo un error de conexión", "");
-      }else{
+      } else {
         modalSweetAlert("error", `Hubo un error en la aplicación ${error}`, "");
-      }  
+      }
     }
   };
 
@@ -151,6 +151,8 @@ const DetallesPublicacion = (props) => {
     if (localStorage.getItem("session-usuario") !== null) {
       const datos = JSON.parse(localStorage.getItem("session-usuario"));
       await obtenerUsuario(datos.correo);
+    }else{
+      setUsuario([]);
     }
   };
 
@@ -195,38 +197,79 @@ const DetallesPublicacion = (props) => {
           <div className="contenedor-formulario">
             <form onSubmit={envioFormulario}>
               <h2>Contacte sin compromiso</h2>
-              <input
-                type="text"
-                value={`${usuario.nombre} ${usuario.apellidos}`}
-                readOnly
-                autoComplete="off"
-                name="nombre"
-                onChange={cambioInput}
-              />
-              <input
-                type="text"
-                value={`${usuario.telefono}`}
-                readOnly
-                name="telefono"
-                onChange={cambioInput}
-              />
-              <input
-                type="text"
-                value={`${usuario.correo}`}
-                readOnly
-                autoComplete="off"
-                name="correo"
-                onChange={cambioInput}
-              />
-              <textarea
-                name="descripcion"
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Estoy interesado/interesada"
-                autoCorrect="on"
-                onChange={cambioInput}
-              />
+              {localStorage.getItem("session-usuario") !== null ? (
+                <>
+                  <input
+                    type="text"
+                    value={`${usuario.nombre} ${usuario.apellidos}`}
+                    readOnly
+                    autoComplete="off"
+                    name="nombre"
+                    onChange={cambioInput}
+                  />
+                  <input
+                    type="text"
+                    value={`${usuario.telefono}`}
+                    readOnly
+                    name="telefono"
+                    onChange={cambioInput}
+                  />
+                  <input
+                    type="text"
+                    value={`${usuario.correo}`}
+                    readOnly
+                    autoComplete="off"
+                    name="correo"
+                    onChange={cambioInput}
+                  />
+                  <textarea
+                    name="descripcion"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Estoy interesado/interesada"
+                    autoCorrect="on"
+                    onChange={cambioInput}
+                  />
+                </>
+              ) : (
+                <>
+                  <input
+                    type="text"
+                    placeholder="Inicia session para contactar"
+                    readOnly
+                    autoComplete="off"
+                    name="nombre"
+                    onChange={cambioInput}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Inicia session para contactar"
+                    readOnly
+                    name="telefono"
+                    onChange={cambioInput}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Inicia session para contactar"
+                    readOnly
+                    autoComplete="off"
+                    name="correo"
+                    onChange={cambioInput}
+                  />
+                  <textarea
+                    name="descripcion"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Inicia session para contactar"
+                    autoCorrect="on"
+                    onChange={cambioInput}
+                    readOnly
+                  />
+                </>
+              )}
+
               <input type="submit" value="Enviar" className="btn-enviar" />
               <br />
               <br />
